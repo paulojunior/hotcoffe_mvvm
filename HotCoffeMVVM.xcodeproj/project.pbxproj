@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E2B990926C196BB0072D6E5 /* AddCoffeOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2B990826C196BB0072D6E5 /* AddCoffeOrderViewModel.swift */; };
 		2EA0B59C26C072AD00E709C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA0B59B26C072AD00E709C3 /* AppDelegate.swift */; };
 		2EA0B59E26C072AD00E709C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA0B59D26C072AD00E709C3 /* SceneDelegate.swift */; };
 		2EA0B5A326C072AD00E709C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EA0B5A126C072AD00E709C3 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E2B990826C196BB0072D6E5 /* AddCoffeOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoffeOrderViewModel.swift; sourceTree = "<group>"; };
 		2EA0B59826C072AD00E709C3 /* HotCoffeMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotCoffeMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EA0B59B26C072AD00E709C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EA0B59D26C072AD00E709C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				2EA0B5BC26C16DC400E709C3 /* OrderViewModel.swift */,
+				2E2B990826C196BB0072D6E5 /* AddCoffeOrderViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				2EA0B5BA26C16A3D00E709C3 /* Order.swift in Sources */,
 				2EA0B59C26C072AD00E709C3 /* AppDelegate.swift in Sources */,
 				2EA0B59E26C072AD00E709C3 /* SceneDelegate.swift in Sources */,
+				2E2B990926C196BB0072D6E5 /* AddCoffeOrderViewModel.swift in Sources */,
 				2EA0B5B226C0765100E709C3 /* OrdersTableViewController.swift in Sources */,
 				2EA0B5B726C156F100E709C3 /* WebService.swift in Sources */,
 				2EA0B5BD26C16DC400E709C3 /* OrderViewModel.swift in Sources */,

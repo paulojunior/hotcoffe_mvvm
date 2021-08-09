@@ -71,7 +71,7 @@
                                 <rect key="frame" x="0.0" y="56" width="414" height="421"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="3K0-pP-8D3">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CoffeTypeTableViewCell" id="3K0-pP-8D3">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3K0-pP-8D3" id="XiA-h8-TVe">
@@ -80,6 +80,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="wnF-jx-UMa" id="dYK-pe-4ME"/>
+                                    <outlet property="delegate" destination="wnF-jx-UMa" id="bMq-zd-FbF"/>
+                                </connections>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hk3-6d-Y84">
                                 <rect key="frame" x="107" y="610" width="200" height="34"/>
@@ -97,34 +101,33 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jsc-2a-9fY">
-                                <rect key="frame" x="104" y="521" width="206" height="32"/>
-                                <segments>
-                                    <segment title="Small"/>
-                                    <segment title="Medium"/>
-                                    <segment title="Large"/>
-                                </segments>
-                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qBl-dX-lTf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="HDv-bS-7TU" firstAttribute="leading" secondItem="qBl-dX-lTf" secondAttribute="leading" id="9GL-Ab-6nK"/>
                             <constraint firstItem="r1H-A0-j9V" firstAttribute="centerX" secondItem="5EH-wx-Ghq" secondAttribute="centerX" id="9Us-7u-Gjl"/>
-                            <constraint firstItem="Jsc-2a-9fY" firstAttribute="top" secondItem="HDv-bS-7TU" secondAttribute="bottom" constant="44" id="OQl-yM-e8b"/>
+                            <constraint firstItem="qBl-dX-lTf" firstAttribute="bottom" secondItem="r1H-A0-j9V" secondAttribute="bottom" constant="91" id="EYV-G8-Jqb"/>
                             <constraint firstItem="HDv-bS-7TU" firstAttribute="top" secondItem="qBl-dX-lTf" secondAttribute="top" id="Pz8-xg-g5X"/>
                             <constraint firstItem="hk3-6d-Y84" firstAttribute="centerX" secondItem="5EH-wx-Ghq" secondAttribute="centerX" id="RpA-5C-tAO"/>
                             <constraint firstItem="HDv-bS-7TU" firstAttribute="height" secondItem="5EH-wx-Ghq" secondAttribute="height" multiplier="0.5" id="Vls-At-C3c"/>
-                            <constraint firstItem="Jsc-2a-9fY" firstAttribute="centerX" secondItem="5EH-wx-Ghq" secondAttribute="centerX" id="jzb-If-9RS"/>
                             <constraint firstItem="r1H-A0-j9V" firstAttribute="top" secondItem="hk3-6d-Y84" secondAttribute="bottom" constant="39" id="kfM-s3-dk4"/>
-                            <constraint firstItem="hk3-6d-Y84" firstAttribute="top" secondItem="Jsc-2a-9fY" secondAttribute="bottom" constant="58" id="poA-Eh-lLU"/>
                             <constraint firstItem="HDv-bS-7TU" firstAttribute="width" secondItem="5EH-wx-Ghq" secondAttribute="width" id="svC-6S-cur"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Order" id="IPf-eh-CWT">
                         <barButtonItem key="leftBarButtonItem" title="Close" id="d7u-Fu-6kK"/>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="ty5-Fz-GKH"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="ty5-Fz-GKH">
+                            <connections>
+                                <action selector="save" destination="wnF-jx-UMa" id="O0m-LZ-08G"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="r1H-A0-j9V" id="JpG-ZN-Xrz"/>
+                        <outlet property="nameTextField" destination="hk3-6d-Y84" id="gKT-eg-1lq"/>
+                        <outlet property="tableView" destination="HDv-bS-7TU" id="kSr-Uc-vWl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6TZ-vW-ycT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
