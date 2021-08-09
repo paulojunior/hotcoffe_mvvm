@@ -20,7 +20,7 @@ enum CoffeSize: String, Codable {
     case large
 }
 
-struct Order {
+struct Order: Codable {
     let name: String
     let email: String
     let type: CoffeType
